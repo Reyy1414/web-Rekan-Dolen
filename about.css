@@ -1,0 +1,106 @@
+
+
+.list_grub {
+  list-style-type: none;
+  text-align: center;
+   margin-top: 400px; /* Menurunkan elemen sejauh 50px */
+  margin-left: 20px; 
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 0; /* Menghilangkan jarak dengan teks di bawah */
+}
+.nama_ul { li
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+    margin: 100px auto 0; /* Margin top 50px untuk menurunkan posisi */
+    border-radius: 8px;
+    background-color: #fff;
+    display: grid;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, 
+                rgba(0, 0, 0, 0.2) 0px 6px 12px;
+    width: 90%;
+    max-width: 600px;
+}
+/* Item dalam Container */
+.nama_li {
+    font-size: 20px; /* Ukuran font */
+    margin: 5 auto; /* Margin otomatis untuk menengahkan */
+    padding: 12px 20px; /* Padding yang lebih proporsional */
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px, 
+                rgba(0, 0, 0, 0.1) 0px 2px 4px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Efek transisi */
+}
+
+.nama_li:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 12px, 
+                rgba(0, 0, 0, 0.1) 0px 2px 4px;
+    transform: translateY(-2px); /* Efek hover sedikit naik */
+}
+
+.all_navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+  }
+
+  .navbar_rekan {
+    color: #ffffff;
+    padding: 15px;
+    margin: 2px;
+    font-size: 30px;
+    border-radius: 20px;
+  }
+
+  header {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .li_navbar {
+    list-style-type: none;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    font-size: 30px;
+  }
+
+  .navbar {
+    color: #ffffff;
+    text-decoration: none;
+
+  }
+
+  .li_navbar:hover {
+    background-color: #858585;
+    transition: .5s ease-in-out;
+    transition-delay: .1,5s;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+  footer p {
+    font-size: 10px;
+  }
+
+  .font_footer {
+    color: #ffffff;
+  }
