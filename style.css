@@ -1,185 +1,176 @@
+/* Reset dasar */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-  }
-
-  ..all_navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    width: 100vw; /* Memastikan lebar penuh */
-    background: linear-gradient(90deg, #4A90E2, #145DA0);
-    color: white;
-    position: fixed; /* Agar navbar tetap di atas saat di-scroll */
-    top: 0;
-    left: 0;
-    right: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  .navbar_rekan {
-    color: #ffffff;
-    padding: 15px;
-    margin: 2px;
-    font-size: 30px;
-    border-radius: 20px;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
 
-  header {
-    background-color: #2d2d2d;
-    color: white;
-    padding: 10px;
-    text-align: center;
+/* Navbar */
+.all_navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Fix tinggi navbar */
+  width: 100%;
+  background: linear-gradient(90deg, #4A90E2, #145DA0);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar_rekan {
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+/* List Navbar */
+.li_navbar {
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.li_navbar:hover {
+  background-color: #858585;
+  transition: .3s ease-in-out;
+  border-radius: 5px;
+}
+
+.navbar {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px; /* Hindari tertutup navbar */
+}
+
+header h1 {
+  font-size: 32px;
+}
+
+/* Galeri */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.photo-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.photo-item:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbar_rekan {
+      font-size: 20px;
   }
 
   .li_navbar {
-    list-style-type: none;
-    padding: 13 px;
-    margin: 20px;
-    margin-bottom: 30px;
-    color: #ffffff;
-    font-size: 30px;
-  }
-
-  .navbar {
-    color: #ffffff;
-    text-decoration: none;
-
-  }
-
-  .li_navbar:hover {
-    background-color: #858585;
-    transition: .5s ease-in-out;
-    transition-delay: .1,5s;
-    border-radius: 8px;
-}
-
-  header h1 {
-    font-size: 36px;
+      font-size: 18px;
+      padding: 8px;
   }
 
   .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* HP */
+@media (max-width: 768px) {
+  .all_navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
   }
 
-  .photo-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+  .navbar_rekan {
+      font-size: 18px;
+      text-align: center;
   }
 
-  .photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    transition: transform 0.3s ease-in-out;
+  .li_navbar {
+      display: block;
+      text-align: center;
+      margin: 5px;
   }
 
-  .photo-item:hover {
-    transform: scale(1.05);
+  .gallery {
+      grid-template-columns: repeat(2, 1fr);
   }
 
-  .photo-item:hover img {
-    transform: scale(1.1);
+  header h1 {
+      font-size: 26px;
+  }
+}
+
+/* Layar sangat kecil (HP kecil) */
+@media (max-width: 480px) {
+  .navbar_rekan {
+      font-size: 16px;
+  }
+
+  .li_navbar {
+      font-size: 16px;
+  }
+
+  .gallery {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  header h1 {
+      font-size: 22px;
   }
 
   footer {
-    background-color: #2d2d2d;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+      font-size: 12px;
   }
-
-  footer p {
-    font-size: 14px;
-  }
-
-  .font_footer {
-    color: #ffffff;
-  }
-
-  .photo-item:active {
-    transform: scale(1.2);
-    border: 5px solid rgba(0, 255, 255, 0.8);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .photo-item:active img {
-    transform: scale(1.15);
-  }
-
-  .photo-item.clicked {
-    transform: scale(1.2);
-    border: 5px solid rgba(0, 255, 255, 0.8);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* Lightbox Styling */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .lightbox img {
-    max-width: 90%;
-    max-height: 80%;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  .lightbox .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Animation */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  img.clicked {
-    transform: scale(1.2);
-    border: 5px solid rgba(0, 255, 255, 0.8);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-    transition: all 0.3s ease-in-out;
-  }
-  
+}
