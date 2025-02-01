@@ -10,12 +10,19 @@
     color: #333;
   }
 
-  .all_navbar {
+  ..all_navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5vh;
-  }
+    height: 10vh;
+    width: 100vw; /* Memastikan lebar penuh */
+    background: linear-gradient(90deg, #4A90E2, #145DA0);
+    color: white;
+    position: fixed; /* Agar navbar tetap di atas saat di-scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
   .navbar_rekan {
     color: #ffffff;
@@ -34,7 +41,7 @@
 
   .li_navbar {
     list-style-type: none;
-    padding: 20px;
+    padding: 13 px;
     margin: 20px;
     margin-bottom: 30px;
     color: #ffffff;
